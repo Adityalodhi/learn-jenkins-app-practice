@@ -10,6 +10,7 @@ pipeline {
             }
             steps {
                 sh '''
+                    mkdir -p /.npm && chown -R node:node /.npm
                     ls -la
                     node --version
                     npm --version
